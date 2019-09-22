@@ -4,7 +4,9 @@ const MenuContainer = props => {
     return (
         <div className="menu-container">
             <div>
-                <div>{props.children}</div>
+                <div>
+                    <ul>{props.children}</ul>
+                </div>
             </div>
         </div>
     );
