@@ -2,9 +2,10 @@
     "name": "traversy-media-hamburger-menu",
     "author": "Gustavo-Kuze",
     "description": "A React Component based on Traversy Media's Hamburger menu & overlay",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "private": false,
     "license": "MIT",
+    "repository": "https://github.com/Gustavo-Kuze/traversy-media-hamburger-menu",
     "keywords": [
         "react",
         "hamburger",
