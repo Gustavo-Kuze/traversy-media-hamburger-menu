@@ -8,6 +8,7 @@ import MenuContainer from "./MenuContainer";
 const Menu = ({
     checkboxStyles,
     hamburgerLinesStyles,
+    hamburgerStyles,
     isMenuOpen,
     onHamburgerClick,
     overlayStyles,
@@ -18,6 +19,7 @@ const Menu = ({
         <MenuWrap>
             <Hamburger
                 checkboxStyles={checkboxStyles}
+                hamburgerStyles={hamburgerStyles}
                 hamburgerLinesStyles={hamburgerLinesStyles}
                 isOpen={isMenuOpen}
                 onClick={onHamburgerClick}
