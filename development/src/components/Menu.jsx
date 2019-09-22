@@ -9,7 +9,10 @@ import MenuItem from "./MenuItem";
 const Menu = props => {
     return (
         <MenuWrap>
-            <Hamburger />
+            <Hamburger
+                checkboxStyles={props.checkboxStyles}
+                hamburgerLinesStyles={props.hamburgerLinesStyles}
+            />
             <MenuContainer>
                 <MenuItem href="#">Home</MenuItem>
                 <MenuItem href="#">About</MenuItem>
