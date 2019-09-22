@@ -1,31 +1,32 @@
 import "./style/main.css";
 import "./style/menu.css";
-import React, { useState } from "react";
+import React from "react";
 import MenuWrap from "./MenuWrap";
 import Hamburger from "./Hamburger";
 import MenuContainer from "./MenuContainer";
-import MenuItem from "./MenuItem";
 
-const Menu = props => {
-    const [isOpen, setIsOpen] = useState(false);
+const Menu = ({
+    checkboxStyles,
+    hamburgerLinesStyles,
+    isMenuOpen,
+    onHamburgerClick,
+    overlayStyles,
+    menuContainerStyles,
+    children
+}) => {
     return (
         <MenuWrap>
             <Hamburger
-                checkboxStyles={props.checkboxStyles}
-                hamburgerLinesStyles={props.hamburgerLinesStyles}
-                isOpen={isOpen}
-                onClick={() => setIsOpen(!isOpen)}
+                checkboxStyles={checkboxStyles}
+                hamburgerLinesStyles={hamburgerLinesStyles}
+                isOpen={isMenuOpen}
+                onClick={onHamburgerClick}
             />
             <MenuContainer
-                overlayStyles={props.overlayStyles}
-                menuContainerStyles={props.menuContainerStyles}
+                overlayStyles={overlayStyles}
+                menuContainerStyles={menuContainerStyles}
             >
-                <MenuItem
-                    href="#"
-                    menuItemStyles={props.menuItemStyles}
-                    menuItemLinkStyles={props.menuItemLinkStyles}
-                    text="Home"
-                />
+                {children}
             </MenuContainer>
         </MenuWrap>
     );

@@ -1,18 +1,25 @@
 import React from "react";
 
-const MenuItem = props => {
+const MenuItem = ({
+    menuItemLinkStyles,
+    menuItemStyles,
+    onClick,
+    text,
+    children,
+    href
+}) => {
     return (
-        <li style={{ ...props.menuItemStyles }}>
-            {props.children ? (
-                props.children
+        <li style={{ ...menuItemStyles }}>
+            {children ? (
+                children
             ) : (
                 <a
-                    href={props.href}
+                    href={href}
                     className="menu-item-link"
-                    onClick={props.onClick}
-                    style={{ ...props.menuItemLinkStyles }}
+                    onClick={() => typeof onClick === "function" && onClick()}
+                    style={{ ...menuItemLinkStyles }}
                 >
-                    {props.text}
+                    {text}
                 </a>
             )}
         </li>
