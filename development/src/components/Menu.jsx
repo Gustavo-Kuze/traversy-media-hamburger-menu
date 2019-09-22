@@ -13,11 +13,17 @@ const Menu = props => {
                 checkboxStyles={props.checkboxStyles}
                 hamburgerLinesStyles={props.hamburgerLinesStyles}
             />
-            <MenuContainer overlayStyles={props.overlayStyles}>
-                <MenuItem href="#">Home</MenuItem>
-                <MenuItem href="#">About</MenuItem>
-                <MenuItem href="#">Services</MenuItem>
-                <MenuItem href="#">Credits</MenuItem>
+            <MenuContainer
+                overlayStyles={props.overlayStyles}
+                menuContainerStyles={props.menuContainerStyles}
+            >
+                <MenuItem
+                    href="#"
+                    menuItemStyles={props.menuItemStyles}
+                    menuItemLinkStyles={props.menuItemLinkStyles}
+                >
+                    Home
+                </MenuItem>
             </MenuContainer>
         </MenuWrap>
     );

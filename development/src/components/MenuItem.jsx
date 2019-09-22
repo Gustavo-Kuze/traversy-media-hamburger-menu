@@ -2,8 +2,13 @@ import React from "react";
 
 const MenuItem = props => {
     return (
-        <li>
-            <a href={props.href} className="menu-item-link">
+        <li style={{ ...props.menuItemStyles }}>
+            <a
+                href={props.href}
+                className="menu-item-link"
+                onClick={props.onClick}
+                style={{ ...props.menuItemLinkStyles }}
+            >
                 {props.children}
             </a>
         </li>
