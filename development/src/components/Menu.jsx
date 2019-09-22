@@ -21,9 +21,8 @@ const Menu = props => {
                     href="#"
                     menuItemStyles={props.menuItemStyles}
                     menuItemLinkStyles={props.menuItemLinkStyles}
-                >
-                    Home
-                </MenuItem>
+                    text="Home"
+                />
             </MenuContainer>
         </MenuWrap>
     );
