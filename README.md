@@ -27,7 +27,6 @@ import Menu, { MenuItem } from "traversy-media-hamburger-menu";
     />
 </Menu>
 ```
-4. That's it! Give this repo a star if you liked it, and feel free to open an issue if you find any problems.
 
 ## Styling
 You can style the hamburger menu, overlay and menu items with ease like this:
@@ -54,8 +53,15 @@ You can style the hamburger menu, overlay and menu items with ease like this:
 </Menu>
 ```
 
-## Menu props
-// TODO...
+## Tips about the MenuItem
+If you want to render a simple link ("a" tag), you can use MenuItem like shown previously. But what if you want to render some other component like `react-router-dom`'s `<Link>`? Well, you can do it like this:
 
-## Menu Items props
-// TODO...
+``` javascript
+<MenuItem>
+    <Link to="/" />
+<MenuItem/>
+```
+easy peasy, right? Just have in mind that the `onClick` **WILL NOT** be called in this case.
+
+## Final words
+Hope you enjoy using this component the same as I have while creating It! Give this repo a star if you liked it, and feel free to open an issue if you find any problems.
